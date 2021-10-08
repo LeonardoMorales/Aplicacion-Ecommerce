@@ -7,16 +7,81 @@
     <fragment
         android:id="@+id/productListFragment"
         android:name="dev.leonardom.androidintroduccion.presentation.product_list.ProductListFragment"
-        android:label="Inicio" />
+        android:label="Inicio" >
+
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="dev.leonardom.androidintroduccion.presentation.favorites.FavoritesFragment"
-        android:label="Favoritos" />
+        android:label="Favoritos" >
+
+        <action
+            android:id="@+id/action_favoritesFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/shoppingCartFragment"
         android:name="dev.leonardom.androidintroduccion.presentation.shopping_cart.ShoppingCartFragment"
-        android:label="Carrito de Compras" />
+        android:label="Carrito de Compras" >
+
+        <action
+            android:id="@+id/action_shoppingCartFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="dev.leonardom.androidintroduccion.presentation.shopping_cart.PaymentFragment"
+        android:label="PaymentFragment" >
+
+        <action
+            android:id="@+id/action_paymentFragment_to_successPaymentDialog"
+            app:destination="@id/successPaymentDialog"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="dev.leonardom.androidintroduccion.presentation.product_detail.ProductDetailFragment"
+        android:label="ProductDetailFragment" >
+
+        <action
+            android:id="@+id/action_productDetailFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/successPaymentDialog"
+        android:name="dev.leonardom.androidintroduccion.presentation.shopping_cart.SuccessPaymentDialog"
+        android:label="SuccessPaymentDialog" />
 
 </navigation>

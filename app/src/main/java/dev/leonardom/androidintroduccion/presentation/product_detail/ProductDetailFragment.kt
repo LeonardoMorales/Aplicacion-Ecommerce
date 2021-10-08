@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import dev.leonardom.androidintroduccion.databinding.FragmentProductDetailBinding
 
 class ProductDetailFragment : Fragment() {
@@ -25,7 +26,8 @@ class ProductDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnPurchase.setOnClickListener {
-
+            val action = ProductDetailFragmentDirections.actionProductDetailFragmentToShoppingCartFragment()
+            findNavController().navigate(action)
         }
     }
 
