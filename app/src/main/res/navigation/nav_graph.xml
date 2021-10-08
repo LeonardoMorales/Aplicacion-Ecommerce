@@ -83,9 +83,15 @@
 
     </fragment>
 
-    <fragment
+    <dialog
         android:id="@+id/successPaymentDialog"
         android:name="dev.leonardom.androidintroduccion.presentation.shopping_cart.SuccessPaymentDialog"
         android:label="SuccessPaymentDialog" />
+
+    <action
+        android:id="@+id/action_global_productListFragment"
+        app:destination="@id/productListFragment"
+        app:popUpTo="@id/productListFragment"
+        app:popUpToInclusive="true"/>
 
 </navigation>
